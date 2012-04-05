@@ -1,0 +1,43 @@
+body {
+	font-family: "Segoe UI", arial, helvetica;
+}
+
+h1 {
+	font-size: 1.2em;
+}
+
+#plugin0 {
+	height: 0px;
+	width: 0px;
+}
+
+.page-header {
+	border-bottom: 1px solid lightBlue;
+}
+
+.page-footer {
+	border-top: 1px solid lightBlue;
+	clear: both;
+	text-align: center;
+}
+
+.left-column {
+	width: 50%;
+	float: left;
+}
+.right-column {
+	width: 50%;
+	float: left;
+}
+
+.form-element {
+	padding-bottom: 0.4em;
+	clear: both;
+}
+
+label.form-label {
+	float: left;
+	width: 10em;
+	margin-right: 0.5em;
+	display: block;
+}

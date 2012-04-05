@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+	<title>Vadimonium Extension :: Example Authentication</title>
+	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+    <script type="text/javascript" src="register.js"></script>
+	<link href="register.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+	<div class="page-header">Vadimonium</div>
+	<div class="content">
+		<div class="left-column">
+			<h1>Register</h1>
+			<form action="register.py" method="post">
+				<div class="form-element">
+					<label class="form-label">Desired Handle: </label>
+					<input type="text" name="handle" />
+				</div>
+				<div class="form-element">
+					<label class="form-label">Vadimonium Profile: </label>
+					<select name="profile" id="profile">
+						<option value="-1">-- Loading --</option>
+					</select>
+				</div>
+				<div>
+					<!-- Hidden fields -->
+					<input type="hidden" name="publicKey" id="register-publicKey" />
+					<input type="submit" value="Register" id="submitRegistration" />				
+				</div>
+			</form>
+		</div>
+		<div class="right-column">
+			<h1>Login</h1>
+			<form action="login.py" method="post">
+				<div>
+					<label class="form-label">Handle: </label>
+					<input type="text" name="handle" />
+				</div>
+				<div>
+					<input type="hidden" name="digest" id="register-digest" value="server should be some random digest here" />
+					<input type="hidden" name="ciphertext" id="register-cipher" />
+					<input type="submit" value="Login" id="submitLogin" />
+				</div>
+			</form>			
+		</div>
+		<div style="clear: both">
+			<!-- The Vadimonium Plugin Object -->
+			<object id="plugin0" type="application/x-vadimonium"></object>
+		</div>
+	</div>
+	<div class="page-footer">Vadimonium</div>
+</body>
+</html>
